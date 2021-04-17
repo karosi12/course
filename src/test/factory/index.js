@@ -5,7 +5,8 @@ import faker from 'faker';
 
 
 FactoryGirl.define('User', User, {
-    fullName: faker.name.findName(),
+    first_name: faker.name.findName(),
+    last_name: faker.name.findName(),
     email: 'adeyemi@example.com',
     password: 'password1234!'
 });

@@ -30,9 +30,11 @@ const createService = async (res, user) => {
   }
   if (data.data) return res.status(400).send(Responses.error(400, "user already exists"));  
   const newUser = new User();
-  newUser.fullName = user.fullName;
+  newUser.first_name = user.first_name;
+  newUser.last_name = user.last_name;
   newUser.email = user.email;
   newUser.phoneNumber = user.phoneNumber;
+  newUser.username = user.username;
   newUser.generateHash(user.password);
   await newUser.save();
   return res.status(201).send(Responses.success(201, "User created successfully", newUser));  

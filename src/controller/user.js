@@ -23,8 +23,9 @@ const login = async (req, res) => {
 
 const register = async (req, res) => { 
   try {
-    const  { fullName, password, email, phoneNumber } = req.body;
-    if(!fullName) return res.status(400).send(Responses.error(400, "fullname is required"));    
+    const  { first_name, last_name, password, email, phoneNumber } = req.body;
+    if(!first_name) return res.status(400).send(Responses.error(400, "first name is required"));    
+    if(!last_name) return res.status(400).send(Responses.error(400, "last name is required"));    
     if(!password) return res.status(400).send(Responses.error(400, "password is required"));    
     if(email || phoneNumber) {
       await UserService.createService(res, req.body)
