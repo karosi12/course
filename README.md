@@ -42,6 +42,7 @@ API documentation Endpoint: https://documenter.getpostman.com/view/10646382/TzJs
 - Download or clone
 - Open terminal inside the root directory of clone folder
 - Type `npm install` to install all dependencies
+- create an env file check the sample for all require keys
 - `npm start` to run the app
 - `npm run dev` to run development environment
 - `npm test` to run the test suits on the app
